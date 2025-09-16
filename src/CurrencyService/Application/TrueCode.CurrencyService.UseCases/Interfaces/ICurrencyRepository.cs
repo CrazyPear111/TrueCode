@@ -2,7 +2,7 @@
 
 namespace TrueCode.CurrencyService.UseCases.Interfaces;
 
-internal interface ICurrencyRepository
+public interface ICurrencyRepository
 {
-    Task<Dictionary<string, double>> GetFavoritesRate();
+    Task<Dictionary<string, double>> GetFavoritesRate(long userId);
 }

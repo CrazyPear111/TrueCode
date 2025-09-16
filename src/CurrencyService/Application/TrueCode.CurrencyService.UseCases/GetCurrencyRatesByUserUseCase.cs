@@ -9,7 +9,7 @@ internal class GetCurrencyRatesByUserUseCase : IUseCase<long, Task<Dictionary<st
 
     public async Task<Dictionary<string, double>> Invoke(long userId)
     {
-        var favoritesRate = await currencyRepository.GetFavoritesRate();
+        var favoritesRate = await currencyRepository.GetFavoritesRate(userId);
         return favoritesRate;
     }
 }

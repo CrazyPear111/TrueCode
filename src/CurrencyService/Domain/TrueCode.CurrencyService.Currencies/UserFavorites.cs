@@ -18,6 +18,8 @@ public class UserFavorites : IList<ICurrency>
 
     public long UserId { get; private init; }
 
+    public IReadOnlyList<ICurrency> FavoriteCurrencies => _favoriteCurrencies;
+
     public int Count => _favoriteCurrencies.Count;
 
     public bool IsReadOnly => false;

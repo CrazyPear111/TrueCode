@@ -1,11 +1,10 @@
-﻿namespace TrueCode.CurrencyService.Currencies
+﻿namespace TrueCode.CurrencyService.Currencies;
+
+public interface ICurrency
 {
-    public interface ICurrency
-    {
-        long Id { get; }
+    long Id { get; }
 
-        string Name { get; }
+    string Name { get; }
 
-        double Rate { get; }
-    }
+    double Rate { get; }
 }
