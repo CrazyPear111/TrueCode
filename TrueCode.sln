@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36310.24 d17.14
+VisualStudioVersion = 17.14.36310.24
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrueCode.UserService.Users"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrueCode.CurrencyService.Currencies", "src\CurrencyService\Domain\TrueCode.CurrencyService.Currencies\TrueCode.CurrencyService.Currencies.csproj", "{2658FC62-3D17-4646-BBC6-76CD19AA7165}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrueCode.CurrencyService.UseCases", "src\CurrencyService\Application\TrueCode.CurrencyService.UseCases\TrueCode.CurrencyService.UseCases.csproj", "{A0DEBD82-6D1C-40C0-BA9D-C1C653EF032B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{2658FC62-3D17-4646-BBC6-76CD19AA7165}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2658FC62-3D17-4646-BBC6-76CD19AA7165}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2658FC62-3D17-4646-BBC6-76CD19AA7165}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0DEBD82-6D1C-40C0-BA9D-C1C653EF032B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0DEBD82-6D1C-40C0-BA9D-C1C653EF032B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0DEBD82-6D1C-40C0-BA9D-C1C653EF032B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0DEBD82-6D1C-40C0-BA9D-C1C653EF032B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +70,7 @@ Global
 		{BD5ABD47-7901-49AC-8A7E-80A8A0F693A9} = {2BE2400B-AC2C-4218-A8BD-E96949106A31}
 		{FDBC0A74-EBD0-4C2D-9090-5C908FC29261} = {C5FDBD53-FA1F-4279-8BF9-B2F186085CE0}
 		{2658FC62-3D17-4646-BBC6-76CD19AA7165} = {33FCC63E-12BC-43C9-98A7-E34A32931639}
+		{A0DEBD82-6D1C-40C0-BA9D-C1C653EF032B} = {F16E62E8-A68B-481B-A2CF-B55629A8F7A3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C6CD9DFC-4D09-4067-85AA-3EE50BEACB5A}
