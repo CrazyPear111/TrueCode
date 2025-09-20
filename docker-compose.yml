@@ -1,0 +1,15 @@
+services:
+  truecode.currencyservice.db:
+    container_name: truecode.currencyservice.db
+    image: postgres:17.0
+    environment:
+      POSTGRES_DB: "truecode_currency_db"
+      POSTGRES_USER: "db_admin"
+      POSTGRES_PASSWORD: "password"
+    ports:
+      - "7432:5432"
+  truecode.currencyservice.api:
+    image: ${DOCKER_REGISTRY-}truecodecurrencyserviceapi
+    build:
+      context: .
+      dockerfile: src/CurrencyService/Presentation/TrueCode.CurrencyService.Api/Dockerfile

@@ -13,6 +13,9 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["src/CurrencyService/Presentation/TrueCode.CurrencyService.Api/TrueCode.CurrencyService.Api.csproj", "src/CurrencyService/Presentation/TrueCode.CurrencyService.Api/"]
+COPY ["src/CurrencyService/Application/TrueCode.CurrencyService.UseCases/TrueCode.CurrencyService.UseCases.csproj", "src/CurrencyService/Application/TrueCode.CurrencyService.UseCases/"]
+COPY ["src/CurrencyService/Domain/TrueCode.CurrencyService.Currencies/TrueCode.CurrencyService.Currencies.csproj", "src/CurrencyService/Domain/TrueCode.CurrencyService.Currencies/"]
+COPY ["src/CurrencyService/Infrastructure/TrueCode.CurrencyService.Data/TrueCode.CurrencyService.Data.csproj", "src/CurrencyService/Infrastructure/TrueCode.CurrencyService.Data/"]
 RUN dotnet restore "./src/CurrencyService/Presentation/TrueCode.CurrencyService.Api/TrueCode.CurrencyService.Api.csproj"
 COPY . .
 WORKDIR "/src/src/CurrencyService/Presentation/TrueCode.CurrencyService.Api"
