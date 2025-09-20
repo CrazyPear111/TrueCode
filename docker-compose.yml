@@ -8,8 +8,16 @@ services:
       POSTGRES_PASSWORD: "password"
     ports:
       - "7432:5432"
+
   truecode.currencyservice.api:
     image: ${DOCKER_REGISTRY-}truecodecurrencyserviceapi
     build:
       context: .
       dockerfile: src/CurrencyService/Presentation/TrueCode.CurrencyService.Api/Dockerfile
+
+  truecode.gateway.api:
+    image: ${DOCKER_REGISTRY-}truecodegatewayapi
+    build:
+      context: .
+      dockerfile: src/Gateway/Presentation/TrueCode.Gateway.Api/Dockerfile
+

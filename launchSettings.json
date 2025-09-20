@@ -4,7 +4,8 @@
       "commandName": "DockerCompose",
       "commandVersion": "1.0",
       "serviceActions": {
-        "truecode.currencyservice.api": "StartDebugging"
+        "truecode.currencyservice.api": "StartDebugging",
+        "truecode.gateway.api": "StartDebugging"
       }
     }
   }

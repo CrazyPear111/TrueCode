@@ -5,7 +5,7 @@ option csharp_namespace = "TrueCode.CurrencyService.Api";
 package currency;
 
 service Currency {
-	rpc GetCurrencyRate (UserRequest) returns (CurrencyRateResponse);
+	rpc GetFavoritesRate (UserRequest) returns (CurrencyRateResponse);
 }
 
 message UserRequest {

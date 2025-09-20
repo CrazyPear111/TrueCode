@@ -13,7 +13,7 @@ namespace TrueCode.CurrencyService.Api.Services
             _useCase = useCase;
         }
 
-        public override async Task<CurrencyRateResponse> GetCurrencyRate(UserRequest request, ServerCallContext context)
+        public override async Task<CurrencyRateResponse> GetFavoritesRate(UserRequest request, ServerCallContext context)
         {
             var result = await _useCase.Invoke(request.Id);
 

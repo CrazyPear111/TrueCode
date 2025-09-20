@@ -1,0 +1,18 @@
+﻿using TrueCode.Gateway.UseCases.Interfaces;
+
+namespace TrueCode.Gateway.UseCases;
+
+public class GetCurrencyRateUseCase
+{
+    ICurrencyRepository _repository;
+
+    public GetCurrencyRateUseCase(ICurrencyRepository currencyRepository)
+    {
+        _repository = currencyRepository;
+    }
+
+    public async Task<IDictionary<string, double>> Invoke(long userId)
+    {
+        return await _repository.GetFavoritesRate(userId);
+    }
+}
