@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrueCode.CurrencyService.Ap
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{81DDED9D-158B-E303-5F62-77A2896D2A5A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrueCode.CurrencyService.Configuration", "src\CurrencyService\Infrastructure\TrueCode.CurrencyService.Configuration\TrueCode.CurrencyService.Configuration.csproj", "{D79DAF41-F4FE-4630-8207-A12E5C1B277E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,10 @@ Global
 		{81DDED9D-158B-E303-5F62-77A2896D2A5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81DDED9D-158B-E303-5F62-77A2896D2A5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81DDED9D-158B-E303-5F62-77A2896D2A5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D79DAF41-F4FE-4630-8207-A12E5C1B277E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D79DAF41-F4FE-4630-8207-A12E5C1B277E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D79DAF41-F4FE-4630-8207-A12E5C1B277E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D79DAF41-F4FE-4630-8207-A12E5C1B277E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -91,6 +97,7 @@ Global
 		{A0DEBD82-6D1C-40C0-BA9D-C1C653EF032B} = {F16E62E8-A68B-481B-A2CF-B55629A8F7A3}
 		{3C0F7918-8154-4E39-B416-23F34CDD3EF9} = {AB7EDB00-5289-4578-9ECD-FC555F0FBB71}
 		{E5FAAF54-39CD-4E61-A698-0ADB588692FF} = {FE8DC139-F4AA-460E-9EE5-BE74B0953AC7}
+		{D79DAF41-F4FE-4630-8207-A12E5C1B277E} = {AB7EDB00-5289-4578-9ECD-FC555F0FBB71}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C6CD9DFC-4D09-4067-85AA-3EE50BEACB5A}

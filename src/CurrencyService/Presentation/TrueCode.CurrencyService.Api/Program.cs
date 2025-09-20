@@ -1,8 +1,11 @@
 using TrueCode.CurrencyService.Api.Services;
+using TrueCode.CurrencyService.Configuration;
 using TrueCode.CurrencyService.Data;
 using TrueCode.CurrencyService.UseCases;
 
 var builder = WebApplication.CreateBuilder(args);
+
+var appSettings = builder.GetAppSettings();
 
 // Add services to the container.
 builder.Services.AddGrpc();
