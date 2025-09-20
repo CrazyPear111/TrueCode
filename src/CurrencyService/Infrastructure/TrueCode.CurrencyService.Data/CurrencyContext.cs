@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Data.Common;
+using TrueCode.CurrencyService.Configuration;
 using TrueCode.CurrencyService.Currencies;
 using TrueCode.CurrencyService.Data.EntityConfiguration;
 using TrueCode.CurrencyService.UseCases.Interfaces;
@@ -10,13 +11,14 @@ internal class CurrencyContext : DbContext, ICurrencyContext
 {
     private readonly string _connectionString;
 
-    public CurrencyContext()
+    public CurrencyContext(AppSettings appSettings)
     {
+        _connectionString = appSettings.ConnectionStrings.CurrencyDB;
     }
 
     public DbSet<Currency> Currencies { get; set; }
 
-    public DbSet<UserFavorites> UserFavorites { get; set; }
+    public DbSet<User> Users { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
@@ -30,7 +32,7 @@ internal class CurrencyContext : DbContext, ICurrencyContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfiguration(new CurrencyConfiguration());
-        modelBuilder.ApplyConfiguration(new UserFavoritesConfiguration());
+        modelBuilder.ApplyConfiguration(new UserConfiguration());
     }
 
     public void Add<TEntity>(TEntity entity) where TEntity : class

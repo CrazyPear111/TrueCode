@@ -14,26 +14,26 @@ internal class CurrencyRepository(CurrencyContext context) : ICurrencyRepository
     /// <returns>Dictionary with key: currency name, and value: currency rate </returns>
     public async Task<Dictionary<string, double>> GetFavoritesRate(long userId)
     {
-        return await context.UserFavorites
-            .Where(uf => uf.UserId == userId)
-            .Include(uf => uf.FavoriteCurrencies)
-            .SelectMany(uf => uf.FavoriteCurrencies)
+        return await context.Users
+            .Where(u => u.Id == userId)
+            .Include(u => u.FavoriteCurrencies)
+            .SelectMany(u => u.FavoriteCurrencies)
             .AsNoTracking()
             .ToDictionaryAsync(c => c.Name, c => c.Rate);
     }
 
     /// <summary>
-    /// Gets tracking UserFavorites, with ability to change it. 
+    /// Gets tracking User, with ability to change it. 
     /// Throws an exception if userId not found in database.
     /// </summary>
     /// <exception cref="InvalidOperationException">Throws if userId not found in database.</exception>
     /// <param name="userId"></param>
-    /// <returns>The single UserFavorites</returns>
-    public async Task<UserFavorites> GetFavorites(long userId)
+    /// <returns>The single User</returns>
+    public async Task<User> GetUser(long userId)
     {
-        var uf = await context.UserFavorites
-                .Where(uf => uf.UserId == userId)
-                .Include(uf => uf.FavoriteCurrencies)
+        var uf = await context.Users
+                .Where(u => u.Id == userId)
+                .Include(u => u.FavoriteCurrencies)
                 .SingleOrDefaultAsync();
 
         if (uf == null)

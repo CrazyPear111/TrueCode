@@ -1,6 +1,6 @@
 ﻿namespace TrueCode.CurrencyService.Currencies;
 
-public sealed class Currency : ICurrency
+public sealed class Currency
 {
     public long Id { get; private init; }
 
