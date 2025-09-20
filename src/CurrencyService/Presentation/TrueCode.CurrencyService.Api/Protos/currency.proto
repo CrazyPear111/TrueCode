@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option csharp_namespace = "TrueCode.CurrencyService.Api";
+
+package currency;
+
+service Currency {
+	rpc GetCurrencyRate (UserRequest) returns (CurrencyRateResponse);
+}
+
+message UserRequest {
+	int64 id = 1;
+}
+
+message CurrencyRateResponse {
+	repeated CurrencyRate rates = 1;
+}
+
+message CurrencyRate {
+	string name = 1;
+	double rate = 2;
+}

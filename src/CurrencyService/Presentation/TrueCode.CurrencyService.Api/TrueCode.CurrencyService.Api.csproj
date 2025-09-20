@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>256e4e42-488d-40de-9776-721962543754</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..\..\..</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Protos\currency.proto" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="Protos\currency.proto" GrpcServices="Server" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Grpc.AspNetCore" Version="2.57.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.22.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Application\TrueCode.CurrencyService.UseCases\TrueCode.CurrencyService.UseCases.csproj" />
+    <ProjectReference Include="..\..\Domain\TrueCode.CurrencyService.Currencies\TrueCode.CurrencyService.Currencies.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\TrueCode.CurrencyService.Data\TrueCode.CurrencyService.Data.csproj" />
+  </ItemGroup>
+
+</Project>
