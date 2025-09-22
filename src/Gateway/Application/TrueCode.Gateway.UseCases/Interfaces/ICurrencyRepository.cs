@@ -2,5 +2,5 @@
 
 public interface ICurrencyRepository
 {
-    Task<Dictionary<string, double>> GetFavoritesRate(long userId);
+    Task<Dictionary<string, decimal>> GetFavoritesRate(long userId);
 }

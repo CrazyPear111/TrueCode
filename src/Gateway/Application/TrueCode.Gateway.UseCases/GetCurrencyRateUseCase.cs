@@ -11,7 +11,7 @@ public class GetCurrencyRateUseCase
         _repository = currencyRepository;
     }
 
-    public async Task<IDictionary<string, double>> Invoke(long userId)
+    public async Task<IDictionary<string, decimal>> Invoke(long userId)
     {
         return await _repository.GetFavoritesRate(userId);
     }

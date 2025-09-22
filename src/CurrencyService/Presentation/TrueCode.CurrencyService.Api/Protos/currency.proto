@@ -18,5 +18,5 @@ message CurrencyRateResponse {
 
 message CurrencyRate {
 	string name = 1;
-	double rate = 2;
+	string rate = 2;
 }

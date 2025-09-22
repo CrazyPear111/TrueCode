@@ -12,9 +12,9 @@ internal class CurrencyRepository : ICurrencyRepository
         _currencyClient = currencyClient;
     }
 
-    public async Task<Dictionary<string, double>> GetFavoritesRate(long userId)
+    public async Task<Dictionary<string, decimal>> GetFavoritesRate(long userId)
     {
         var response = await _currencyClient.GetFavoritesRateAsync(new() { Id = userId });
-        return response.Rates.ToDictionary(r => r.Name, r => r.Rate);
+        return response.Rates.ToDictionary(r => r.Name, r => decimal.Parse(r.Rate));
     }
 }

@@ -6,9 +6,9 @@ namespace TrueCode.CurrencyService.Api.Services
 {
     public class CurrencyService : Currency.CurrencyBase
     {
-        private readonly IUseCase<long, Task<Dictionary<string, double>>> _useCase;
+        private readonly IUseCase<long, Task<Dictionary<string, decimal>>> _useCase;
 
-        public CurrencyService(IUseCase<long, Task<Dictionary<string, double>>> useCase)
+        public CurrencyService(IUseCase<long, Task<Dictionary<string, decimal>>> useCase)
         {
             _useCase = useCase;
         }
@@ -22,7 +22,7 @@ namespace TrueCode.CurrencyService.Api.Services
                 result.Select(pair => new CurrencyRate() 
                 { 
                     Name = pair.Key, 
-                    Rate = pair.Value 
+                    Rate = pair.Value.ToString(),
                 }));
 
             return response;
