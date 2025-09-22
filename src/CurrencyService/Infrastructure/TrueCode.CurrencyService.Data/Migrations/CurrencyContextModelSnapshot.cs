@@ -35,8 +35,8 @@ namespace TrueCode.CurrencyService.Data.Migrations
                         .HasColumnType("text")
                         .HasColumnName("name");
 
-                    b.Property<double>("Rate")
-                        .HasColumnType("double precision")
+                    b.Property<decimal>("Rate")
+                        .HasColumnType("numeric")
                         .HasColumnName("rate");
 
                     b.HasKey("Id")

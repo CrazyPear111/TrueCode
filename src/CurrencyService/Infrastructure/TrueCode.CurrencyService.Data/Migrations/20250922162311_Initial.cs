@@ -18,7 +18,7 @@ namespace TrueCode.CurrencyService.Data.Migrations
                     id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     name = table.Column<string>(type: "text", nullable: false),
-                    rate = table.Column<double>(type: "double precision", nullable: false)
+                    rate = table.Column<decimal>(type: "numeric", nullable: false)
                 },
                 constraints: table =>
                 {

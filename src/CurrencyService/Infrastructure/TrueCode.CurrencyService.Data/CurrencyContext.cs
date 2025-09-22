@@ -9,11 +9,8 @@ namespace TrueCode.CurrencyService.Data;
 
 internal class CurrencyContext : DbContext, ICurrencyContext
 {
-    private readonly string _connectionString;
-
-    public CurrencyContext(AppSettings appSettings)
+    public CurrencyContext(DbContextOptions<CurrencyContext> options) : base(options)
     {
-        _connectionString = appSettings.ConnectionStrings.CurrencyDB;
     }
 
     public DbSet<Currency> Currencies { get; set; }
@@ -23,7 +20,6 @@ internal class CurrencyContext : DbContext, ICurrencyContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder
-            .UseNpgsql(_connectionString)
             .UseSnakeCaseNamingConvention();
 
         base.OnConfiguring(optionsBuilder);

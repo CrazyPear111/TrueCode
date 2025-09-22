@@ -1,38 +1,23 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.Worker">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>256e4e42-488d-40de-9776-721962543754</UserSecretsId>
+    <UserSecretsId>dotnet-TrueCode.CurrencyService.CurrencyUpdater-2718a61a-cad2-4459-89cd-fb6e01cbb469</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>..\..\..\..</DockerfileContext>
-    <DockerComposeProjectPath>..\..\..\..\docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Protos\currency.proto" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Protobuf Include="Protos\currency.proto" GrpcServices="Server" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Grpc.AspNetCore" Version="2.57.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.9">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.1" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.22.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\Application\TrueCode.CurrencyService.UseCases\TrueCode.CurrencyService.UseCases.csproj" />
-    <ProjectReference Include="..\..\Domain\TrueCode.CurrencyService.Currencies\TrueCode.CurrencyService.Currencies.csproj" />
     <ProjectReference Include="..\..\Infrastructure\TrueCode.CurrencyService.Configuration\TrueCode.CurrencyService.Configuration.csproj" />
     <ProjectReference Include="..\..\Infrastructure\TrueCode.CurrencyService.Data\TrueCode.CurrencyService.Data.csproj" />
     <ProjectReference Include="..\..\Infrastructure\TrueCode.CurrencyService.RateClient\TrueCode.CurrencyService.RateClient.csproj" />
   </ItemGroup>
-
 </Project>

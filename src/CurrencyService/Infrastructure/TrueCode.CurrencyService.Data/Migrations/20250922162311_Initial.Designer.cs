@@ -11,7 +11,7 @@ using TrueCode.CurrencyService.Data;
 namespace TrueCode.CurrencyService.Data.Migrations
 {
     [DbContext(typeof(CurrencyContext))]
-    [Migration("20250920153253_Initial")]
+    [Migration("20250922162311_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -38,8 +38,8 @@ namespace TrueCode.CurrencyService.Data.Migrations
                         .HasColumnType("text")
                         .HasColumnName("name");
 
-                    b.Property<double>("Rate")
-                        .HasColumnType("double precision")
+                    b.Property<decimal>("Rate")
+                        .HasColumnType("numeric")
                         .HasColumnName("rate");
 
                     b.HasKey("Id")

@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Application\TrueCode.CurrencyService.Models\TrueCode.CurrencyService.Models.csproj" />
+    <ProjectReference Include="..\..\Application\TrueCode.CurrencyService.UseCases\TrueCode.CurrencyService.UseCases.csproj" />
+  </ItemGroup>
+
+</Project>

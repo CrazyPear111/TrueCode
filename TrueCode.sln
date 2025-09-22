@@ -61,6 +61,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrueCode.Gateway.UseCases",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrueCode.Gateway.Configuration", "src\Gateway\Infrastructure\TrueCode.Gateway.Configuration\TrueCode.Gateway.Configuration.csproj", "{3FC14980-D415-4E88-98AC-F02BED97B6A0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrueCode.CurrencyService.CurrencyUpdater", "src\CurrencyService\Presentation\TrueCode.CurrencyService.CurrencyUpdater\TrueCode.CurrencyService.CurrencyUpdater.csproj", "{1167C049-D25D-4740-BF85-DBE4A8049860}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrueCode.CurrencyService.RateClient", "src\CurrencyService\Infrastructure\TrueCode.CurrencyService.RateClient\TrueCode.CurrencyService.RateClient.csproj", "{ABE0A1FD-8E29-4409-A3C3-F8F95B9B8AE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrueCode.CurrencyService.Models", "src\CurrencyService\Application\TrueCode.CurrencyService.Models\TrueCode.CurrencyService.Models.csproj", "{7B22AA8F-68F2-46AD-A368-08DAFDF6D48B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +117,18 @@ Global
 		{3FC14980-D415-4E88-98AC-F02BED97B6A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FC14980-D415-4E88-98AC-F02BED97B6A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FC14980-D415-4E88-98AC-F02BED97B6A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1167C049-D25D-4740-BF85-DBE4A8049860}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1167C049-D25D-4740-BF85-DBE4A8049860}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1167C049-D25D-4740-BF85-DBE4A8049860}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1167C049-D25D-4740-BF85-DBE4A8049860}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABE0A1FD-8E29-4409-A3C3-F8F95B9B8AE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABE0A1FD-8E29-4409-A3C3-F8F95B9B8AE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABE0A1FD-8E29-4409-A3C3-F8F95B9B8AE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABE0A1FD-8E29-4409-A3C3-F8F95B9B8AE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B22AA8F-68F2-46AD-A368-08DAFDF6D48B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B22AA8F-68F2-46AD-A368-08DAFDF6D48B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B22AA8F-68F2-46AD-A368-08DAFDF6D48B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B22AA8F-68F2-46AD-A368-08DAFDF6D48B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -140,6 +158,9 @@ Global
 		{292FB3AD-7C98-4C7E-906A-0E59C31A1D0D} = {701031A2-E43F-460C-A381-7998CE76869A}
 		{573A542D-64C1-49A5-8D79-6D93868ADD7C} = {FBA0D6E6-B2E2-4A27-A584-DEF50F1FBAF6}
 		{3FC14980-D415-4E88-98AC-F02BED97B6A0} = {701031A2-E43F-460C-A381-7998CE76869A}
+		{1167C049-D25D-4740-BF85-DBE4A8049860} = {FE8DC139-F4AA-460E-9EE5-BE74B0953AC7}
+		{ABE0A1FD-8E29-4409-A3C3-F8F95B9B8AE7} = {AB7EDB00-5289-4578-9ECD-FC555F0FBB71}
+		{7B22AA8F-68F2-46AD-A368-08DAFDF6D48B} = {F16E62E8-A68B-481B-A2CF-B55629A8F7A3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C6CD9DFC-4D09-4067-85AA-3EE50BEACB5A}

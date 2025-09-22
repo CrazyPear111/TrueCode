@@ -12,7 +12,7 @@ internal class CurrencyRepository(CurrencyContext context) : ICurrencyRepository
     /// </summary>
     /// <param name="userId"></param>
     /// <returns>Dictionary with key: currency name, and value: currency rate </returns>
-    public async Task<Dictionary<string, double>> GetFavoritesRate(long userId)
+    public async Task<Dictionary<string, decimal>> GetFavoritesRate(long userId)
     {
         return await context.Users
             .Where(u => u.Id == userId)
@@ -44,5 +44,11 @@ internal class CurrencyRepository(CurrencyContext context) : ICurrencyRepository
         }
 
         return uf;
+    }
+
+    public async Task<List<Currency>> GetCurrencies()
+    {
+        var currencies = await context.Currencies.ToListAsync();
+        return currencies;
     }
 }

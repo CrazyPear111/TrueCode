@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Domain\TrueCode.CurrencyService.Currencies\TrueCode.CurrencyService.Currencies.csproj" />
+    <ProjectReference Include="..\TrueCode.CurrencyService.Models\TrueCode.CurrencyService.Models.csproj" />
   </ItemGroup>
 
 </Project>

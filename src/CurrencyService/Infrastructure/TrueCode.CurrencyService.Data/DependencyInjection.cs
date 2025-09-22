@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using TrueCode.CurrencyService.Configuration;
 using TrueCode.CurrencyService.Data.Repositories;
 using TrueCode.CurrencyService.UseCases.Interfaces;
 
@@ -6,11 +8,14 @@ namespace TrueCode.CurrencyService.Data;
 
 public static class DependencyInjection
 {
-    private readonly static string _connectionString;
-
-    public static IServiceCollection AddDataServices(this IServiceCollection services)
+    public static IServiceCollection AddDataServices(this IServiceCollection services, AppSettings appSettings)
     {
-        services.AddDbContext<ICurrencyContext, CurrencyContext>();
+        var connectionString = appSettings.ConnectionStrings.CurrencyDB;
+        services.AddDbContext<ICurrencyContext, CurrencyContext>(options => 
+        {
+            options.UseNpgsql(connectionString);
+        });
+
         services.AddScoped<ICurrencyRepository, CurrencyRepository>();
         return services;
     }

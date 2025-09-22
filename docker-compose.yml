@@ -14,10 +14,15 @@ services:
     build:
       context: .
       dockerfile: src/CurrencyService/Presentation/TrueCode.CurrencyService.Api/Dockerfile
+      
+  truecode.currencyservice.currencyupdater:
+    image: ${DOCKER_REGISTRY-}truecodecurrencyservicecurrencyupdater
+    build:
+      context: .
+      dockerfile: src/CurrencyService/Presentation/TrueCode.CurrencyService.CurrencyUpdater/Dockerfile
 
   truecode.gateway.api:
     image: ${DOCKER_REGISTRY-}truecodegatewayapi
     build:
       context: .
       dockerfile: src/Gateway/Presentation/TrueCode.Gateway.Api/Dockerfile
-
