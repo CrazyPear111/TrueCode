@@ -11,6 +11,8 @@ internal class CurrencyContext : DbContext, ICurrencyContext
 {
     public CurrencyContext(DbContextOptions<CurrencyContext> options) : base(options)
     {
+        //TODO: remove in production
+        Database.Migrate();
     }
 
     public DbSet<Currency> Currencies { get; set; }

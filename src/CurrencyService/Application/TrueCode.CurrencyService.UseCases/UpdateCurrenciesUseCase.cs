@@ -9,7 +9,10 @@ public class UpdateCurrenciesUseCase
     private readonly ICurrencyRepository _currencyRepository;
     private readonly ICbrClient _client;
 
-    public UpdateCurrenciesUseCase(ICurrencyContext context, ICurrencyRepository repository, ICbrClient client)
+    public UpdateCurrenciesUseCase(
+        ICurrencyContext context, 
+        ICurrencyRepository repository, 
+        ICbrClient client)
     {
         _context = context;
         _currencyRepository = repository;

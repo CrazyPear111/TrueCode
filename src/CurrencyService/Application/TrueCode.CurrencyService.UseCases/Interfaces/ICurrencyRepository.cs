@@ -4,9 +4,9 @@ namespace TrueCode.CurrencyService.UseCases.Interfaces;
 
 public interface ICurrencyRepository
 {
-    Task<Dictionary<string, decimal>> GetFavoritesRate(long userId);
+    Task<Currency> GetCurrency(int id);
 
-    Task<User> GetUser(long userId);
+    Task<Currency?> GetCurrencyOrDefault(int id);
 
     Task<List<Currency>> GetCurrencies();
 }

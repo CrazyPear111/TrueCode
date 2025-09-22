@@ -17,6 +17,7 @@ public static class DependencyInjection
         });
 
         services.AddScoped<ICurrencyRepository, CurrencyRepository>();
+        services.AddScoped<IUserRepository, UserRepository>();
         return services;
     }
 }

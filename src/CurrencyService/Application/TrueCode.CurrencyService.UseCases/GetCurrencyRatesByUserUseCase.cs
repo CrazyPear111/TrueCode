@@ -3,18 +3,18 @@ using TrueCode.CurrencyService.UseCases.Interfaces;
 
 namespace TrueCode.CurrencyService.UseCases;
 
-internal class GetCurrencyRatesByUserUseCase : IUseCase<long, Task<Dictionary<string, decimal>>>
+public class GetCurrencyRatesByUserUseCase : IUseCase<long, Task<Dictionary<string, decimal>>>
 {
-    private readonly ICurrencyRepository _currencyRepository;
+    private readonly IUserRepository _userRepository;
 
-    public GetCurrencyRatesByUserUseCase(ICurrencyRepository repository)
+    public GetCurrencyRatesByUserUseCase(IUserRepository repository)
     {
-        _currencyRepository = repository;
+        _userRepository = repository;
     }
 
     public async Task<Dictionary<string, decimal>> Invoke(long userId)
     {
-        var favoritesRate = await _currencyRepository.GetFavoritesRate(userId);
+        var favoritesRate = await _userRepository.GetFavoritesRate(userId);
         return favoritesRate;
     }
 }

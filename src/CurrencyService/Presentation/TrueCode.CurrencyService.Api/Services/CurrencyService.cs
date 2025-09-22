@@ -1,27 +1,43 @@
 ﻿using Grpc.Core;
 using TrueCode.CurrencyService.Api;
+using TrueCode.CurrencyService.UseCases;
 using TrueCode.CurrencyService.UseCases.Interfaces;
 
 namespace TrueCode.CurrencyService.Api.Services
 {
     public class CurrencyService : Currency.CurrencyBase
     {
-        private readonly IUseCase<long, Task<Dictionary<string, decimal>>> _useCase;
+        private readonly GetCurrencyRatesByUserUseCase _getCurrencyRatesUseCase;
+        private readonly AddFavoriteUseCase _addFavoriteUseCase;
 
-        public CurrencyService(IUseCase<long, Task<Dictionary<string, decimal>>> useCase)
+        public CurrencyService(
+            GetCurrencyRatesByUserUseCase getCurrencyRatesUseCase,
+            AddFavoriteUseCase addFavoriteUseCase)
         {
-            _useCase = useCase;
+            _getCurrencyRatesUseCase = getCurrencyRatesUseCase;
+            _addFavoriteUseCase = addFavoriteUseCase;
         }
 
         public override async Task<CurrencyRateResponse> GetFavoritesRate(UserRequest request, ServerCallContext context)
         {
-            var result = await _useCase.Invoke(request.Id);
+            var result = await _getCurrencyRatesUseCase.Invoke(request.Id);
+            return MapCurrencyRate(result);
+        }
 
+        public override async Task<CurrencyRateResponse> AddFavorite(AddFavoriteRequest request, ServerCallContext context)
+        {
+            await _addFavoriteUseCase.Invoke(request.UserId, request.CurrencyId); 
+            var result = await _getCurrencyRatesUseCase.Invoke(request.UserId);
+            return MapCurrencyRate(result);
+        }
+
+        private static CurrencyRateResponse MapCurrencyRate(Dictionary<string, decimal> currencyRates)
+        {
             CurrencyRateResponse response = new();
             response.Rates.AddRange(
-                result.Select(pair => new CurrencyRate() 
-                { 
-                    Name = pair.Key, 
+                currencyRates.Select(pair => new CurrencyRate()
+                {
+                    Name = pair.Key,
                     Rate = pair.Value.ToString(),
                 }));
 

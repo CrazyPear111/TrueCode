@@ -1,8 +1,5 @@
-using Microsoft.Extensions.DependencyInjection;
 using TrueCode.CurrencyService.Configuration;
-using TrueCode.CurrencyService.RateClient;
 using TrueCode.CurrencyService.UseCases;
-using TrueCode.CurrencyService.UseCases.Interfaces;
 
 namespace TrueCode.CurrencyService.CurrencyUpdater;
 

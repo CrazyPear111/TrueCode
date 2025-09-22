@@ -6,10 +6,16 @@ package currency;
 
 service Currency {
 	rpc GetFavoritesRate (UserRequest) returns (CurrencyRateResponse);
+	rpc AddFavorite (AddFavoriteRequest) returns (CurrencyRateResponse);
 }
 
 message UserRequest {
 	int64 id = 1;
+}
+
+message AddFavoriteRequest {
+	int64 userId = 1;
+	int32 currencyId = 2;
 }
 
 message CurrencyRateResponse {

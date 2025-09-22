@@ -7,8 +7,9 @@ public static class DependencyInjection
 {
     public static IServiceCollection AddUseCases(this IServiceCollection services)
     {
-        services.AddTransient<IUseCase<long, Task<Dictionary<string, decimal>>>, GetCurrencyRatesByUserUseCase>();
+        services.AddTransient<GetCurrencyRatesByUserUseCase>();
         services.AddTransient<UpdateCurrenciesUseCase>();
+        services.AddTransient<AddFavoriteUseCase>();
         return services;
     }
 }
