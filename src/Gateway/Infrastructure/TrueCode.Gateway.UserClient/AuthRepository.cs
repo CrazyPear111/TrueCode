@@ -1,12 +1,13 @@
 ﻿using TrueCode.Gateway.UseCases.Interfaces;
+using TrueCode.UserService.Api;
 
 namespace TrueCode.Gateway.UserClient;
 
 internal class AuthRepository : IAuthRepository
 {
-    private readonly Auth.Auth.AuthClient _authClient;
+    private readonly Auth.AuthClient _authClient;
 
-    public AuthRepository(Auth.Auth.AuthClient authClient)
+    public AuthRepository(Auth.AuthClient authClient)
     {
         _authClient = authClient;
     }

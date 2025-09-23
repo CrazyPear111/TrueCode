@@ -1,10 +1,9 @@
-﻿using Auth;
-using Grpc.Core;
+﻿using Grpc.Core;
 using Microsoft.AspNetCore.Identity;
 
 namespace TrueCode.UserService.Api.Services;
 
-public class AuthService : Auth.Auth.AuthBase
+public class AuthService : Auth.AuthBase
 {
     private readonly UserManager<IdentityUser> _userManager;
     private readonly TokenService _tokenService;
