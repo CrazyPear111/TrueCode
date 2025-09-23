@@ -18,7 +18,7 @@ public class AddFavoriteUseCase
         _currencyRepository = currencyRepository;
     }
 
-    public async Task Invoke(long userId, int currencyId)
+    public async Task Invoke(Guid userId, int currencyId)
     {
         var user = await _userRepository.GetUserOrDefault(userId);
         if (user == null)

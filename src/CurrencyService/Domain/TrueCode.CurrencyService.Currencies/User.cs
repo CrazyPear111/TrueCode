@@ -6,13 +6,18 @@ public class User
 
     private User() {}
 
-    public User(long userId)
+    public User(Guid userId)
     {
+        if (userId == Guid.Empty)
+        {
+            ArgumentException.ThrowIfNullOrEmpty(nameof(userId));
+        }
+
         Id = userId;
         _favoriteCurrencies = [];
     }
 
-    public long Id { get; init; }
+    public Guid Id { get; init; }
 
     public IReadOnlyCollection<Currency> FavoriteCurrencies => _favoriteCurrencies;
 

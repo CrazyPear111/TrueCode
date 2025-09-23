@@ -11,6 +11,7 @@ public static class DependencyInjection
     public static IServiceCollection AddDataServices(this IServiceCollection services, AppSettings appSettings)
     {
         var connectionString = appSettings.ConnectionStrings.CurrencyDB;
+        //connectionString = "Host=localhost;Port=7432;Database=truecode_currency_db;Username=db_admin;Password=password";
         services.AddDbContext<ICurrencyContext, CurrencyContext>(options => 
         {
             options.UseNpgsql(connectionString);

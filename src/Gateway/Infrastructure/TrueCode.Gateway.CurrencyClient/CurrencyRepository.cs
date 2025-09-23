@@ -12,15 +12,15 @@ internal class CurrencyRepository : ICurrencyRepository
         _currencyClient = currencyClient;
     }
 
-    public async Task<Dictionary<string, decimal>> GetFavoritesRate(long userId)
+    public async Task<Dictionary<string, decimal>> GetFavoritesRate(Guid userId)
     {
-        var response = await _currencyClient.GetFavoritesRateAsync(new() { Id = userId });
+        var response = await _currencyClient.GetFavoritesRateAsync(new() { Id = userId.ToString() });
         return response.Rates.ToDictionary(r => r.Name, r => decimal.Parse(r.Rate));
     }
 
-    public async Task<Dictionary<string, decimal>> AddFavorite(long userId, int currencyId)
+    public async Task<Dictionary<string, decimal>> AddFavorite(Guid userId, int currencyId)
     {
-        var response = await _currencyClient.AddFavoriteAsync(new() { UserId = userId, CurrencyId = currencyId });
+        var response = await _currencyClient.AddFavoriteAsync(new() { UserId = userId.ToString(), CurrencyId = currencyId });
         return response.Rates.ToDictionary(r => r.Name, r => decimal.Parse(r.Rate));
     }
 }

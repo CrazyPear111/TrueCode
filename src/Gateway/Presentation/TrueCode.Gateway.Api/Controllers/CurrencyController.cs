@@ -21,14 +21,14 @@ namespace TrueCode.Gateway.Api.Controllers
         }
 
         [HttpGet("{userId}")]
-        public async Task<IActionResult> Get(long userId)
+        public async Task<IActionResult> Get(Guid userId)
         {
             var result = await _getCurrencyRateUseCase.Invoke(userId);
             return Ok(result);
         }
 
         [HttpPatch("{userId}/favorites/{currencyId}")]
-        public async Task<IActionResult> Patch(long userId, int currencyId)
+        public async Task<IActionResult> Patch(Guid userId, int currencyId)
         {
             var result = await _addFavoriteUseCase.Invoke(userId, currencyId);
             return Ok(result);

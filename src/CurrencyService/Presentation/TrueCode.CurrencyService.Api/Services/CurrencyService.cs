@@ -20,14 +20,14 @@ namespace TrueCode.CurrencyService.Api.Services
 
         public override async Task<CurrencyRateResponse> GetFavoritesRate(UserRequest request, ServerCallContext context)
         {
-            var result = await _getCurrencyRatesUseCase.Invoke(request.Id);
+            var result = await _getCurrencyRatesUseCase.Invoke(Guid.Parse(request.Id));
             return MapCurrencyRate(result);
         }
 
         public override async Task<CurrencyRateResponse> AddFavorite(AddFavoriteRequest request, ServerCallContext context)
         {
-            await _addFavoriteUseCase.Invoke(request.UserId, request.CurrencyId); 
-            var result = await _getCurrencyRatesUseCase.Invoke(request.UserId);
+            await _addFavoriteUseCase.Invoke(Guid.Parse(request.UserId), request.CurrencyId); 
+            var result = await _getCurrencyRatesUseCase.Invoke(Guid.Parse(request.UserId));
             return MapCurrencyRate(result);
         }
 

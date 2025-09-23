@@ -2,7 +2,7 @@
 
 public interface ICurrencyRepository
 {
-    Task<Dictionary<string, decimal>> GetFavoritesRate(long userId);
+    Task<Dictionary<string, decimal>> GetFavoritesRate(Guid userId);
 
-    Task<Dictionary<string, decimal>> AddFavorite(long userId, int currencyId);
+    Task<Dictionary<string, decimal>> AddFavorite(Guid userId, int currencyId);
 }

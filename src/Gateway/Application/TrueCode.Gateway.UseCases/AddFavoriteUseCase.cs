@@ -11,7 +11,7 @@ public class AddFavoriteUseCase
         _repository = currencyRepository;
     }
 
-    public async Task<IDictionary<string, decimal>> Invoke(long userId, int currencyId)
+    public async Task<IDictionary<string, decimal>> Invoke(Guid userId, int currencyId)
     {
         return await _repository.AddFavorite(userId, currencyId);
     }
