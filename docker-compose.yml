@@ -7,7 +7,17 @@ services:
       POSTGRES_USER: "db_admin"
       POSTGRES_PASSWORD: "password"
     ports:
-      - "7432:5432"
+      - "7432:5432" 
+
+  truecode.userservice.db:
+    container_name: truecode.userservice.db
+    image: postgres:17.0
+    environment:
+      POSTGRES_DB: "truecode_user_db"
+      POSTGRES_USER: "db_admin"
+      POSTGRES_PASSWORD: "password"
+    ports:
+      - "8432:5432"
 
   truecode.currencyservice.api:
     image: ${DOCKER_REGISTRY-}truecodecurrencyserviceapi
@@ -26,3 +36,10 @@ services:
     build:
       context: .
       dockerfile: src/Gateway/Presentation/TrueCode.Gateway.Api/Dockerfile
+     
+  truecode.userservice.api:
+    image: ${DOCKER_REGISTRY-}truecodeuserserviceapi
+    build:
+      context: .
+      dockerfile: src/UserService/Presentation/TrueCode.UserService.Api/Dockerfile
+

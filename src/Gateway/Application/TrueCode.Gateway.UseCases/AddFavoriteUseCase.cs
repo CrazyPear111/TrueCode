@@ -4,7 +4,7 @@ namespace TrueCode.Gateway.UseCases;
 
 public class AddFavoriteUseCase
 {
-    ICurrencyRepository _repository;
+    private readonly ICurrencyRepository _repository;
 
     public AddFavoriteUseCase(ICurrencyRepository currencyRepository)
     {

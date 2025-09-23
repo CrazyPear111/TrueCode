@@ -6,7 +6,8 @@
       "serviceActions": {
         "truecode.currencyservice.api": "StartDebugging",
         "truecode.gateway.api": "StartDebugging",
-        "truecode.currencyservice.currencyupdater": "StartDebugging"
+        "truecode.currencyservice.currencyupdater": "StartDebugging",
+        "truecode.userservice.api": "StartDebugging"
       }
     }
   }

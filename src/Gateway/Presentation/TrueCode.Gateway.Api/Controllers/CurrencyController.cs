@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using TrueCode.Gateway.UseCases;
 
 namespace TrueCode.Gateway.Api.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("[controller]")]
     public class CurrencyController : Controller

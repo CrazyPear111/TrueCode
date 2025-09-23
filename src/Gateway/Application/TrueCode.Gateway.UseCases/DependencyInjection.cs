@@ -8,6 +8,8 @@ public static class DependencyInjection
     {
         services.AddTransient<GetCurrencyRateUseCase>();
         services.AddTransient<AddFavoriteUseCase>();
+        services.AddTransient<RegisterUseCase>();
+        services.AddTransient<LoginUseCase>();
         return services;
     }
 }
