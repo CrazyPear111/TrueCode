@@ -10,7 +10,7 @@ public class User
     {
         if (userId == Guid.Empty)
         {
-            ArgumentException.ThrowIfNullOrEmpty(nameof(userId));
+            throw new ArgumentException("UserId should not be empty.");
         }
 
         Id = userId;

@@ -2,6 +2,8 @@
 
 public sealed class Currency
 {
+    private string name;
+
     private decimal rate;
 
     public Currency(long id, string name, decimal rate)
@@ -13,7 +15,15 @@ public sealed class Currency
 
     public long Id { get; private init; }
 
-    public string Name { get; private set; }
+    public string Name
+    {
+        get => name;
+        set
+        {
+            ArgumentException.ThrowIfNullOrEmpty(value, nameof(name));
+            name = value;
+        }
+    }
 
     public decimal Rate 
     { 
