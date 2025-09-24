@@ -4,6 +4,9 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="gGChtELU4aR6pFSRaGbR-1" value="" style="rounded=0;whiteSpace=wrap;html=1;opacity=0;" vertex="1" parent="1">
+          <mxGeometry x="340" y="180" width="1040" height="520" as="geometry" />
+        </mxCell>
         <mxCell id="7Y75IU_MD2MDU0oT_368-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="7Y75IU_MD2MDU0oT_368-5" target="7Y75IU_MD2MDU0oT_368-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -19,44 +22,44 @@
         <mxCell id="7Y75IU_MD2MDU0oT_368-32" value="" style="group" parent="7Y75IU_MD2MDU0oT_368-35" vertex="1" connectable="0">
           <mxGeometry x="32" y="30" width="256" height="45" as="geometry" />
         </mxCell>
-        <mxCell id="7Y75IU_MD2MDU0oT_368-14" value="TrueCode.Api" style="rounded=1;whiteSpace=wrap;html=1;" parent="7Y75IU_MD2MDU0oT_368-32" vertex="1">
+        <mxCell id="7Y75IU_MD2MDU0oT_368-14" value="Gateway.Api" style="rounded=1;whiteSpace=wrap;html=1;" parent="7Y75IU_MD2MDU0oT_368-32" vertex="1">
           <mxGeometry width="256" height="45" as="geometry" />
         </mxCell>
         <mxCell id="7Y75IU_MD2MDU0oT_368-43" value="Api Gateway" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="7Y75IU_MD2MDU0oT_368-35" vertex="1">
           <mxGeometry x="100" width="120" height="30" as="geometry" />
         </mxCell>
         <mxCell id="7Y75IU_MD2MDU0oT_368-36" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="380" y="490" width="400" height="180" as="geometry" />
+          <mxGeometry x="360" y="490" width="440" height="180" as="geometry" />
         </mxCell>
         <mxCell id="7Y75IU_MD2MDU0oT_368-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="7Y75IU_MD2MDU0oT_368-36" vertex="1">
-          <mxGeometry width="400" height="180" as="geometry" />
+          <mxGeometry width="440.00000000000006" height="180" as="geometry" />
         </mxCell>
         <mxCell id="7Y75IU_MD2MDU0oT_368-2" value="User Service" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="7Y75IU_MD2MDU0oT_368-36" vertex="1">
-          <mxGeometry x="140" y="7" width="120" height="30" as="geometry" />
+          <mxGeometry x="154" y="7" width="132" height="30" as="geometry" />
         </mxCell>
         <mxCell id="7Y75IU_MD2MDU0oT_368-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="7Y75IU_MD2MDU0oT_368-36" source="7Y75IU_MD2MDU0oT_368-12" target="7Y75IU_MD2MDU0oT_368-17" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="7Y75IU_MD2MDU0oT_368-28" value="" style="group" parent="7Y75IU_MD2MDU0oT_368-36" vertex="1" connectable="0">
-          <mxGeometry x="260" y="60" width="120" height="60" as="geometry" />
+          <mxGeometry x="286" y="60" width="132" height="60" as="geometry" />
         </mxCell>
         <mxCell id="7Y75IU_MD2MDU0oT_368-17" value="UserDB" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" parent="7Y75IU_MD2MDU0oT_368-28" vertex="1">
-          <mxGeometry width="120" height="60" as="geometry" />
+          <mxGeometry width="132" height="60" as="geometry" />
         </mxCell>
         <mxCell id="7Y75IU_MD2MDU0oT_368-29" value="" style="group" parent="7Y75IU_MD2MDU0oT_368-36" vertex="1" connectable="0">
-          <mxGeometry x="30" y="67.5" width="160" height="45" as="geometry" />
+          <mxGeometry x="33" y="67.5" width="176" height="45" as="geometry" />
         </mxCell>
         <mxCell id="7Y75IU_MD2MDU0oT_368-12" value="UserService.Api" style="rounded=1;whiteSpace=wrap;html=1;" parent="7Y75IU_MD2MDU0oT_368-29" vertex="1">
-          <mxGeometry width="160" height="45" as="geometry" />
+          <mxGeometry width="176" height="45" as="geometry" />
         </mxCell>
         <mxCell id="7Y75IU_MD2MDU0oT_368-40" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="910" y="490" width="420" height="180" as="geometry" />
+          <mxGeometry x="880" y="490" width="480" height="180" as="geometry" />
         </mxCell>
         <mxCell id="7Y75IU_MD2MDU0oT_368-3" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="7Y75IU_MD2MDU0oT_368-40" vertex="1">
-          <mxGeometry width="420" height="180" as="geometry" />
+          <mxGeometry width="480" height="180" as="geometry" />
         </mxCell>
         <mxCell id="7Y75IU_MD2MDU0oT_368-4" value="Currency Service" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="7Y75IU_MD2MDU0oT_368-40" vertex="1">
-          <mxGeometry x="160" y="7" width="100" height="35" as="geometry" />
+          <mxGeometry x="182.85714285714283" y="7" width="114.28571428571428" height="35" as="geometry" />
         </mxCell>
         <mxCell id="7Y75IU_MD2MDU0oT_368-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="7Y75IU_MD2MDU0oT_368-40" source="7Y75IU_MD2MDU0oT_368-9" target="7Y75IU_MD2MDU0oT_368-19" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -65,25 +68,22 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="7Y75IU_MD2MDU0oT_368-27" value="" style="group" parent="7Y75IU_MD2MDU0oT_368-40" vertex="1" connectable="0">
-          <mxGeometry x="260" y="71" width="120" height="60" as="geometry" />
+          <mxGeometry x="297.1428571428571" y="71" width="137.14285714285714" height="60" as="geometry" />
         </mxCell>
         <mxCell id="7Y75IU_MD2MDU0oT_368-19" value="CurrencyDB" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" parent="7Y75IU_MD2MDU0oT_368-27" vertex="1">
-          <mxGeometry width="120" height="60" as="geometry" />
+          <mxGeometry width="137.14285714285714" height="60" as="geometry" />
         </mxCell>
         <mxCell id="7Y75IU_MD2MDU0oT_368-30" value="" style="group" parent="7Y75IU_MD2MDU0oT_368-40" vertex="1" connectable="0">
-          <mxGeometry x="30" y="49.5" width="160" height="45" as="geometry" />
+          <mxGeometry x="34.285714285714285" y="49.5" width="182.85714285714283" height="45" as="geometry" />
         </mxCell>
         <mxCell id="7Y75IU_MD2MDU0oT_368-7" value="CurrencyService.Api" style="rounded=1;whiteSpace=wrap;html=1;" parent="7Y75IU_MD2MDU0oT_368-30" vertex="1">
-          <mxGeometry width="160" height="45" as="geometry" />
+          <mxGeometry width="182.85714285714283" height="45" as="geometry" />
         </mxCell>
         <mxCell id="7Y75IU_MD2MDU0oT_368-31" value="" style="group" parent="7Y75IU_MD2MDU0oT_368-40" vertex="1" connectable="0">
-          <mxGeometry x="32" y="111" width="158" height="45" as="geometry" />
+          <mxGeometry x="36.57142857142857" y="111" width="180.57142857142856" height="45" as="geometry" />
         </mxCell>
-        <mxCell id="7Y75IU_MD2MDU0oT_368-9" value="CurrencyService.Processor" style="rounded=1;whiteSpace=wrap;html=1;" parent="7Y75IU_MD2MDU0oT_368-31" vertex="1">
-          <mxGeometry x="-10" width="168" height="45" as="geometry" />
-        </mxCell>
-        <mxCell id="gGChtELU4aR6pFSRaGbR-1" value="" style="rounded=0;whiteSpace=wrap;html=1;opacity=0;" vertex="1" parent="1">
-          <mxGeometry x="350" y="180" width="1010" height="520" as="geometry" />
+        <mxCell id="7Y75IU_MD2MDU0oT_368-9" value="CurrencyService.CurrencyUpdater" style="rounded=1;whiteSpace=wrap;html=1;" parent="7Y75IU_MD2MDU0oT_368-31" vertex="1">
+          <mxGeometry x="-11.428571428571427" width="192" height="45" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
