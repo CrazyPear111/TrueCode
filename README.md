@@ -26,3 +26,9 @@ gRPC API позволяет добавлять осуществлять логи
 
 ### Tests
 Также в решении присутствуют сборки с unit-тестами для доменных сущностей и use-case'ов. Находятся в папке /tests.
+
+--------------
+
+## License
+
+This project is licensed under the **Apache License**. This means that you can use, modify and distribute it freely. See [http://www.apache.org/licenses/LICENSE-2.0.html](http://www.apache.org/licenses/LICENSE-2.0.html) for more details.
