@@ -30,13 +30,13 @@ builder.Services
         options.TokenValidationParameters = new TokenValidationParameters
         {
             ValidateIssuer = true,
-            ValidIssuer = "userservice",
+            ValidIssuer = appSettings.JwtSettings.Issuer,
             ValidateAudience = true,
-            ValidAudience = "gateway",
+            ValidAudience = appSettings.JwtSettings.Audience,
             ValidateLifetime = true,
             ValidateIssuerSigningKey = true,
             IssuerSigningKey = new SymmetricSecurityKey(
-                Encoding.UTF8.GetBytes("super_secret_long_key_for_demo_only_change_it"))
+                Encoding.UTF8.GetBytes(appSettings.JwtSettings.Key))
         };
     });
 
