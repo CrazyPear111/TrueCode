@@ -79,6 +79,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrueCode.Gateway.UserClient
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrueCode.CurrencyService.Currencies.UnitTests", "tests\TrueCode.CurrencyService.Currencies.UnitTests\TrueCode.CurrencyService.Currencies.UnitTests.csproj", "{EB283196-6F83-454A-919E-0C24831B07D5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrueCode.CurrencyService.UseCases.UnitTests", "tests\TrueCode.CurrencyService.UseCases.UnitTests\TrueCode.CurrencyService.UseCases.UnitTests.csproj", "{501EC376-A6C7-4FD7-B3AC-67407DED9D68}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -165,6 +167,10 @@ Global
 		{EB283196-6F83-454A-919E-0C24831B07D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB283196-6F83-454A-919E-0C24831B07D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB283196-6F83-454A-919E-0C24831B07D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{501EC376-A6C7-4FD7-B3AC-67407DED9D68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{501EC376-A6C7-4FD7-B3AC-67407DED9D68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{501EC376-A6C7-4FD7-B3AC-67407DED9D68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{501EC376-A6C7-4FD7-B3AC-67407DED9D68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -203,6 +209,7 @@ Global
 		{8048137B-4D65-477D-B602-DB10F2D5D59D} = {9CAE140F-C783-4755-9EC5-A9E5F84B6052}
 		{3A3EE8E4-C93F-4C76-B497-0A7814B4F66E} = {701031A2-E43F-460C-A381-7998CE76869A}
 		{EB283196-6F83-454A-919E-0C24831B07D5} = {CBF68B8F-C6DA-4A7E-A867-C9E202561D2F}
+		{501EC376-A6C7-4FD7-B3AC-67407DED9D68} = {CBF68B8F-C6DA-4A7E-A867-C9E202561D2F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C6CD9DFC-4D09-4067-85AA-3EE50BEACB5A}
