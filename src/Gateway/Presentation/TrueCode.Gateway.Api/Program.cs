@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
+using TrueCode.Gateway.Api.Filters;
 using TrueCode.Gateway.Configuration;
 using TrueCode.Gateway.CurrencyClient;
 using TrueCode.Gateway.UseCases;
@@ -12,7 +13,11 @@ var builder = WebApplication.CreateBuilder(args);
 var appSettings = builder.GetAppSettings();
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers(options =>
+{
+    options.Filters.Add<ExceptionFilterAttribute>();
+});
+
 builder.Services
     .AddCurrencyClient(appSettings)
     .AddUserClient(appSettings)

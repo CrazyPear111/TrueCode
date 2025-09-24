@@ -14,7 +14,11 @@ internal class AuthRepository : IAuthRepository
 
     public async Task RegisterAsync(string userName, string password)
     {
-        await _authClient.RegisterAsync(new() { Username = userName, Password = password });
+        var result = await _authClient.RegisterAsync(new() { Username = userName, Password = password });
+        if (!result.Success)
+        {
+            throw new InvalidOperationException(result.Error);
+        }
     }
 
     public async Task<string> LoginAsync(string userName, string password)
@@ -25,6 +29,6 @@ internal class AuthRepository : IAuthRepository
             return result.AccessToken;
         }
 
-        return null;
+        throw new InvalidOperationException(result.Error);
     }
 }
