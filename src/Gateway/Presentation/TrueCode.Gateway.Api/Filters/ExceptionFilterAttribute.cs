@@ -16,6 +16,12 @@ public class ExceptionFilterAttribute : Attribute, IExceptionFilter
             HandleInvalidOperationException(context);
             return;
         }
+
+        if (exception is RpcException)
+        {
+            HandleRpcException(context);
+            return;
+        }
     }
 
     private void HandleInvalidOperationException(ExceptionContext context)
@@ -31,5 +37,23 @@ public class ExceptionFilterAttribute : Attribute, IExceptionFilter
 
         context.Result = new BadRequestObjectResult(details);
         return;
+    }
+
+    private void HandleRpcException(ExceptionContext context)
+    {
+        var exception = context.Exception as RpcException;
+
+        if (exception.StatusCode == StatusCode.NotFound)
+        {
+            var details = new ProblemDetails()
+            {
+                Status = 400,
+                Title = "Not Found",
+                Detail = exception.Status.Detail,
+            };
+
+            context.Result = new BadRequestObjectResult(details);
+            return;
+        }
     }
 }

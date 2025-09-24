@@ -1,3 +1,4 @@
+using TrueCode.CurrencyService.Api.Interceptors;
 using TrueCode.CurrencyService.Api.Services;
 using TrueCode.CurrencyService.Configuration;
 using TrueCode.CurrencyService.Data;
@@ -9,7 +10,11 @@ var builder = WebApplication.CreateBuilder(args);
 var appSettings = builder.GetAppSettings();
 
 // Add services to the container.
-builder.Services.AddGrpc();
+builder.Services.AddGrpc(options =>
+{
+    options.Interceptors.Add<ExceptionInterceptor>();
+});
+
 builder.Services
     .AddDataServices(appSettings)
     .AddUseCases()
